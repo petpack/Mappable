@@ -82,6 +82,14 @@ class GoogleMapUtil
 		self::$api_key = $key;
 	}
 	
+	/**
+	 * Get the API key for Google Maps
+	 *
+	 * @param string $key 
+	 */
+	public static function get_api_key() {
+		return self::$api_key;
+	}
 	
 	/**
 	 * Set the default size of the map

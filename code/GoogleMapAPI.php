@@ -445,7 +445,8 @@ class GoogleMapAPI extends ViewableData
         $this->centerLng = (float) ($this->minLng + $this->maxLng) / 2;
         $this->centerLat = (float) ($this->minLat + $this->maxLat) / 2;
 		
-        $this->contentMarker .= "\t\t\t".'createMarker('.$lat.','.$lng.',"'.$html.'","'.$category.'","'.$icon.'");'."\n";
+        $this->contentMarker .= "\t\t\t".'createMarker('.$lat.','.$lng.',"'
+        	.addslashes(str_replace("\n", '\n', $html)).'","'.$category.'","'.$icon.'");'."\n";
     }
 
     /**
