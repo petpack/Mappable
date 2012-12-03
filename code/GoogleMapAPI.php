@@ -444,9 +444,9 @@ class GoogleMapAPI extends ViewableData
         $this->minLat = (float) min((float)$lat, $this->minLat);
         $this->centerLng = (float) ($this->minLng + $this->maxLng) / 2;
         $this->centerLat = (float) ($this->minLat + $this->maxLat) / 2;
-		
+
         $this->contentMarker .= "\t\t\t".'createMarker('.$lat.','.$lng.',"'
-        	.addslashes(str_replace("\n", '\n', $html)).'","'.$category.'","'.$icon.'");'."\n";
+            .str_replace("\n", '\n', $html).'","'.$category.'","'.$icon.'");'."\n";
     }
 
     /**
@@ -642,17 +642,13 @@ class GoogleMapAPI extends ViewableData
         $this->content .= "\t\t".'GEvent.addListener(marker,"click",function() { ';
 		
 		// Enable the zoom when you click on a marker
-		if ($this->enableWindowZoom==true) {
-			$this->content .= 'map.setCenter(new GLatLng(lat,lng),'.$this->infoWindowZoom.'); ';
-		}
-		
-		$this->content .= 'marker.openInfoWindowHtml(html); });'."\n"; 
+        $this->enableWindowZoom && $this->content .= 'map.setCenter(new GLatLng(lat,lng),'.$this->infoWindowZoom.'); ';
+
+        $this->content .= 'marker.openInfoWindowHtml(html); });'."\n";
         $this->content .= "\t\t".'gmarkers.push(marker);'."\n";
 
         // Hide marker by default
-        if ($this->defaultHideMarker==true) {
-            $this->content .= "\t\t".'marker.hide();'."\n";
-        }
+        $this->defaultHideMarker && $this->content .= "\t\t".'marker.hide();'."\n";
 
         $this->content .= "\t".'}'."\n";
         
