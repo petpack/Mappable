@@ -408,7 +408,7 @@ class GoogleMapAPI extends ViewableData
 		if(function_exists('curl_init')) {
 			$data = $this->getContent($url);
 		} else {
-			$data = file_get_contents($url);
+			$data = @file_get_contents($url);
 		}
 
 		$csvSplit = preg_split("/,/",$data);
