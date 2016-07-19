@@ -39,7 +39,7 @@ class GoogleMapAPI extends ViewableData
 	protected $iconHeight = 24;
 
 	/**
-	 * @var int Infowindow width of the gmarker
+	 * @var SS_Int Infowindow width of the gmarker
 	 **/
 	protected $infoWindowWidth = 250;
 
@@ -148,12 +148,12 @@ class GoogleMapAPI extends ViewableData
 	/**
 	 * Set the useClusterer parameter (optimization to display a lot of marker)
 	 *
-	 * @param boolean $useClusterer use cluster or not
+	 * @param SS_Boolean $useClusterer use cluster or not
 	 * @param string $clusterIcon the cluster icon
-	 * @param int $maxVisibleMarkers max visible markers
-	 * @param int $gridSize grid size
-	 * @param int $minMarkersPerClusterer minMarkersPerClusterer
-	 * @param int $maxLinesPerInfoBox maxLinesPerInfoBox
+	 * @param SS_Int $maxVisibleMarkers max visible markers
+	 * @param SS_Int $gridSize grid size
+	 * @param SS_Int $minMarkersPerClusterer minMarkersPerClusterer
+	 * @param SS_Int $maxLinesPerInfoBox maxLinesPerInfoBox
 	 *
 	 * @return void
 	 */
@@ -195,8 +195,8 @@ class GoogleMapAPI extends ViewableData
 	/**
 	 * Set the size of the gmap
 	 *
-	 * @param int $width GoogleMap  width
-	 * @param int $height GoogleMap  height
+	 * @param SS_Int $width GoogleMap  width
+	 * @param SS_Int $height GoogleMap  height
 	 *
 	 * @return void
 	 */
@@ -210,7 +210,7 @@ class GoogleMapAPI extends ViewableData
 	/**
 	 * Set the with of the gmap infowindow (on marker clik)
 	 *
-	 * @param int $infoWindowWidth GoogleMap  info window width
+	 * @param SS_Int $infoWindowWidth GoogleMap  info window width
 	 *
 	 * @return void
 	 */
@@ -223,8 +223,8 @@ class GoogleMapAPI extends ViewableData
 	/**
 	 * Set the size of the icon markers
 	 *
-	 * @param int $iconWidth GoogleMap  marker icon width
-	 * @param int $iconHeight GoogleMap  marker icon height
+	 * @param SS_Int $iconWidth GoogleMap  marker icon width
+	 * @param SS_Int $iconHeight GoogleMap  marker icon height
 	 *
 	 * @return void
 	 */
@@ -251,7 +251,7 @@ class GoogleMapAPI extends ViewableData
 	/**
 	 * Set the zoom of the gmap
 	 *
-	 * @param int $zoom GoogleMap  zoom.
+	 * @param SS_Int $zoom GoogleMap  zoom.
 	 *
 	 * @return void
 	 */
@@ -264,7 +264,7 @@ class GoogleMapAPI extends ViewableData
 	/**
 	 * Set the zoom of the infowindow
 	 *
-	 * @param int $zoom GoogleMap  zoom.
+	 * @param SS_Int $zoom GoogleMap  zoom.
 	 *
 	 * @return void
 	 */
@@ -277,7 +277,7 @@ class GoogleMapAPI extends ViewableData
 	/**
 	 * Enable the zoom on the marker when you click on it
 	 *
-	 * @param int $zoom GoogleMap  zoom.
+	 * @param SS_Int $zoom GoogleMap  zoom.
 	 *
 	 * @return void
 	 */
@@ -290,7 +290,7 @@ class GoogleMapAPI extends ViewableData
 	/**
 	 * Enable theautomatic center/zoom at the gmap load
 	 *
-	 * @param int $zoom GoogleMap  zoom.
+	 * @param SS_Int $zoom GoogleMap  zoom.
 	 *
 	 * @return void
 	 */
@@ -336,7 +336,7 @@ class GoogleMapAPI extends ViewableData
 	/**
 	 * Set the center of the gmap
 	 *
-	 * @param boolean $displayDirectionFields display directions or not in the info window
+	 * @param SS_Boolean $displayDirectionFields display directions or not in the info window
 	 *
 	 * @return void
 	 */
@@ -349,7 +349,7 @@ class GoogleMapAPI extends ViewableData
 	/**
 	 * Set the defaultHideMarker
 	 *
-	 * @param boolean $defaultHideMarker hide all the markers on the map by default
+	 * @param SS_Boolean $defaultHideMarker hide all the markers on the map by default
 	 *
 	 * @return void
 	 */

@@ -11,53 +11,53 @@ class GoogleMapUtil
 	
 	
 	/**
-	 * @var int Number of active {@see GoogleMapsAPI} instances (for the HTML ID)
+	 * @var SS_Int Number of active {@see GoogleMapsAPI} instances (for the HTML ID)
 	 */
 	protected static $instances = 0;
 
 
 	/**
-	 * @var int The default width of a Google Map
+	 * @var SS_Int The default width of a Google Map
 	 */
 	public static $map_width = 400;
 	
 	
 	/**
-	 * @var int The default height of a Google Map
+	 * @var SS_Int The default height of a Google Map
 	 */
 	public static $map_height = 400;
 
-        /** @var int Icon width of the gmarker **/
+        /** @var SS_Int Icon width of the gmarker **/
         public static $iconWidth = 24;
 
-        /** @var int Icon height of the gmarker **/
+        /** @var SS_Int Icon height of the gmarker **/
         public static $iconHeight = 24;
 		
 	/**
-	 * @var int Prefix for the div ID of the map
+	 * @var SS_Int Prefix for the div ID of the map
 	 */
 	public static $div_id = "google_map";
 	
 	
 	/**
-	 * @var boolean Automatic center/zoom for the map
+	 * @var SS_Boolean Automatic center/zoom for the map
 	 */
 	public static $automatic_center = true;
 	
 	
 	/**
-	 * @var boolean Show directions fields on the map
+	 * @var SS_Boolean Show directions fields on the map
 	 */
 	public static $direction_fields = false;
 	
 	
 	/**
-	 * @var boolean Show the marker fields on the map
+	 * @var SS_Boolean Show the marker fields on the map
 	 */
 	public static $hide_marker = false;
 
 	/**
-	 * @var boolean Show the marker fields on the map
+	 * @var SS_Boolean Show the marker fields on the map
 	 */
 	public static $map_type = 'G_NORMAL_MAP';
 
@@ -67,7 +67,7 @@ class GoogleMapUtil
 	public static $center = 'Paris, France';
 
         /**
-         * @var int info_window_width Width of info window
+         * @var SS_Int info_window_width Width of info window
          */
 
         public static $info_window_width = 250;
@@ -94,8 +94,8 @@ class GoogleMapUtil
 	/**
 	 * Set the default size of the map
 	 *
-	 * @param int $width
-	 * @param int $height
+	 * @param SS_Int $width
+	 * @param SS_Int $height
 	 */
 	public static function set_map_size($width, $height) {
 		self::$map_width = $width;
@@ -117,7 +117,7 @@ class GoogleMapUtil
     /**
       * Set the with of the gmap infowindow (on marker clik)
       *
-      * @param int $info_window_width GoogleMap info window width
+      * @param SS_Int $info_window_width GoogleMap info window width
       *
       * @return void
       */
@@ -141,8 +141,8 @@ class GoogleMapUtil
     /**
       * Set the size of the icon markers
       *
-      * @param int $iconWidth GoogleMap  marker icon width
-      * @param int $iconHeight GoogleMap  marker icon height
+      * @param SS_Int $iconWidth GoogleMap  marker icon width
+      * @param SS_Int $iconHeight GoogleMap  marker icon height
       *
       * @return void
       */
